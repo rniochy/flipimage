@@ -9,11 +9,6 @@ const imageFour = document.getElementById("image-four");
 
 
 
-
-
-
-
-
 /** Events Arrow */
 upArrow.addEventListener("click", ()=>{
       alert();
