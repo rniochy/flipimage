@@ -92,9 +92,9 @@ main {
     grid-row: 2/3;
     grid-column: 3/4;
    text-align: end;
+   position: relative;
 }
 
-.arrow:hover {
-     color: red;
-     cursor: pointer;
+.arrow::after {
+    
 }
