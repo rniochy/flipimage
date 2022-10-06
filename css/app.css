@@ -5,3 +5,14 @@
      border: none;
      text-decoration: none;
 }
+/* 
+main {
+     background: #111111;
+} */
+
+.image {
+     background-color: red;
+     height: 5rem;
+     width: 5rem;
+     border: 1px solid green;
+}
