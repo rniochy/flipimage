@@ -1,6 +1,7 @@
 :root {
      --border-radius: 5px;
      --margin-top: 0.2rem;
+     --arrow-width: 70px;
 }
 
 *  {
@@ -25,15 +26,15 @@ main {
      display: grid;
      grid-template-columns: repeat(2, 8rem);
      grid-template-rows: repeat(2, 8rem);
-     column-gap: .2rem;
-     row-gap: .2rem;
+     column-gap: .1rem;
+     row-gap: .1rem;
      margin-top: 1rem;
 }
 .image {
      background-color: red;
      height: 8rem;
      width: 8rem;
-     border: 1px solid green;
+     border: 1px solid rgb(0, 0, 0);
      border-radius: var(--border-radius);
 }
 #content-below {
@@ -58,28 +59,42 @@ main {
 /**
       ROWS 
 */
-.arrows {
+#arrows {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: repeat(3, 1fr);
-     justify-content: center;
-     width: 16rem;
-     align-items: center;
+     width: fit-content;
+     margin: 1rem auto;
+     font-size: 20pt;
+     font-weight: bolder;
+     
 }
 #up-arrow {
+    width: var(--arrow-width);
      grid-row: 1/2;
      grid-column: 2/3;
+     text-align: center;
 }
 #down-arrow {
+    width: var(--arrow-width);
     grid-row: 3/4;
     grid-column: 2/3;
+    text-align: center;
 }
 #left-arrow {
+    width: var(--arrow-width);
     grid-row: 2/3;
     grid-column: 1/2;
 
 }
 #right-arrow {
+    width: var(--arrow-width);
     grid-row: 2/3;
     grid-column: 3/4;
+   text-align: end;
+}
+
+.arrow:hover {
+     color: red;
+     cursor: pointer;
 }
