@@ -3,6 +3,14 @@ const rightArrow = document.getElementById("right-arrow");
 const leftArrow = document.getElementById("left-arrow");
 const downArrow = document.getElementById("down-arrow");
 
+
+
+
+
+
+
+
+
 upArrow.addEventListener("click", ()=>{
       alert();
 });
