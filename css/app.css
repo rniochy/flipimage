@@ -1,6 +1,6 @@
 :root {
      --border-radius: 5px;
-     --margin-top: 0.2px;
+     --margin-top: 0.2rem;
 }
 
 *  {
@@ -53,4 +53,13 @@ main {
      margin-top: var(--margin-top);
      padding: 0.3rem;
      text-align: center;
+}
+
+/**
+      ROWS 
+*/
+.arrows {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
 }
