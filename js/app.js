@@ -14,7 +14,7 @@ const imageFour = document.getElementById("image-four");
 
 
 
-
+/** Events Arrow */
 upArrow.addEventListener("click", ()=>{
       alert();
 });
@@ -30,6 +30,7 @@ leftArrow.addEventListener("click", ()=>{
 downArrow.addEventListener("click", ()=>{
       alert();
 });
+/** Events Arrow */
 imageOne.addEventListener("click", ()=>{
       alert();
 });
