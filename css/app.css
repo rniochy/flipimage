@@ -2,6 +2,7 @@
      --border-radius: 5px;
      --margin-top: 0.2rem;
      --arrow-width: 70px;
+     --column: column;
 }
 
 *  {
@@ -16,7 +17,7 @@ main {
     height: 90vh;
     width: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: var(--column);
     align-items: center;
     margin: 0.5rem auto;
     border-radius: var(--border-radius);;
@@ -40,12 +41,12 @@ main {
 #content-below {
      margin-top: var(--margin-top);
      display: flex;
-     flex-direction: column;
+     flex-direction: var(--column);
      width: 16rem;
 }
 #content-below input, #content-below button {
      display: flex;
-     flex-direction: column;
+     flex-direction: var(--column);
      width: 16rem;
      border: 1px solid #fff;
      border-radius: 3px;
@@ -53,7 +54,7 @@ main {
  button {
      margin-top: var(--margin-top);
      padding: 0.3rem;
-     text-align: center;
+     text-indent: 100px;
 }
 
 /**
