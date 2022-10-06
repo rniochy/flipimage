@@ -75,4 +75,6 @@ main {
 
 }
 #right-arrow {
+    grid-row: 2/3;
+    grid-column: 3/4;
 }
