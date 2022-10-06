@@ -63,3 +63,16 @@ main {
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: repeat(3, 1fr);
 }
+#up-arrow {
+}
+#down-arrow {
+    grid-row: 1/4;
+
+}
+#left-arrow {
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+}
+#right-arrow {
+}
