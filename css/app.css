@@ -18,7 +18,7 @@ main {
     align-items: center;
     margin: 0.5rem auto;
     border-radius: var(--border-radius);;
-    background: #111111;
+    /* background: #111111; */
 }
 #image-matrix {
      display: grid;
@@ -47,7 +47,7 @@ main {
      border: 1px solid #fff;
      border-radius: 3px;
 }
-#content-below button {
+ button {
     margin-top: 0.2rem;
      padding: 0.3rem;
      text-align: center;
