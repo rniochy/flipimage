@@ -35,3 +35,20 @@ main {
      border: 1px solid green;
      border-radius: var(--border-radius);
 }
+#content-below {
+     display: flex;
+     flex-direction: column;
+     width: 16rem;
+}
+#content-below input, #content-below button {
+     display: flex;
+     flex-direction: column;
+     width: 16rem;
+     border: 1px solid #fff;
+     border-radius: 3px;
+}
+#content-below button {
+    margin-top: 0.2rem;
+     padding: 0.3rem;
+     text-align: center;
+}
