@@ -95,6 +95,6 @@ main {
    position: relative;
 }
 
-.arrow::after {
-    
+.arrow:hover {
+    cursor: pointer;
 }
