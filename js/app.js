@@ -7,11 +7,11 @@ const imageTwo = document.getElementById("image-two");
 const imageThree = document.getElementById("image-three");
 const imageFour = document.getElementById("image-four");
 const inputFile = document.getElementById("inputFile");
-const display = document.getElementById("display");
 const imgOne = document.getElementById('one');
 const imgTwo = document.getElementById('two');
 const imgThree = document.getElementById('three');
 const imgFour = document.getElementById('four');
+const display = document.getElementById("display");
 
 let image;
 
@@ -44,14 +44,25 @@ imageFour.addEventListener("click", ()=>{
 
 /** Events Arrow */
 upArrow.addEventListener("click", ()=>{
-    image.className = "flipUp";
+    flipImage("flipUp");
 });
 rightArrow.addEventListener("click", ()=>{
-    image.className = "flipRight";
+    flipImage("flipRight");
 });
 leftArrow.addEventListener("click", ()=>{
-    image.className = "flipLeft";
+    flipImage("flipLeft");
 });
 downArrow.addEventListener("click", ()=>{
-      image.className = "flipDown";
+    flipImage("flipDown");
 });
+
+display.addEventListener('click', ()=>{
+    imgOne.setAttribute('class', "");
+    imgTwo.setAttribute('class', "");
+    imgThree.setAttribute('class', "");
+    imgFour.setAttribute('class', "");
+})
+
+function flipImage(arrow){
+     image.className = arrow;
+}
