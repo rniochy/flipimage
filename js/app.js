@@ -8,31 +8,38 @@ const imageThree = document.getElementById("image-three");
 const imageFour = document.getElementById("image-four");
 const inputFile = document.getElementById("inputFile");
 const display = document.getElementById("display");
+const imgOne = document.getElementById('one');
+const imgTwo = document.getElementById('two');
+const imgThree = document.getElementById('three');
+const imgFour = document.getElementById('four');
 
 let image;
 
 inputFile.addEventListener("change", (event)=>{
      console.log(event.target.files[0]);
      const im = event.target.files[0];
-     const img = document.getElementById('one');
-     img.setAttribute("src", im);
+     const fileLoad = new FileReader();
+
+     fileLoad.onload = function(e){
+        imgOne.src = e.target.result;
+        imgTwo.src = e.target.result;
+        imgThree.src = e.target.result;
+        imgFour.src = e.target.result;
+     }
+     fileLoad.readAsDataURL(im)
 });
 /** Events images */
 imageOne.addEventListener("click", ()=>{
-    const img = document.getElementById('one');
-    image = img;
+    image = imgOne;
 });
 imageTwo.addEventListener("click", ()=>{
-    const img = document.getElementById('two');
-    image = img;
+    image = imgTwo;
 });
 imageThree.addEventListener("click", ()=>{
-    const img = document.getElementById('three');
-    image = img;
+    image = imgThree;
 });
 imageFour.addEventListener("click", ()=>{
-    const img = document.getElementById('four');
-    image = img;
+    image = imgFour;
 });
 
 /** Events Arrow */

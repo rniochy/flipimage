@@ -131,3 +131,7 @@ img {
 .flipLeft {
      transform: rotate(270deg);
 }
+
+.hide {
+      visibility: hidden;
+}
