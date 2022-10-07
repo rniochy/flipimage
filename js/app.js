@@ -12,15 +12,17 @@ const imgTwo = document.getElementById('two');
 const imgThree = document.getElementById('three');
 const imgFour = document.getElementById('four');
 const display = document.getElementById("display");
-const warning = document.getElementById("warning");
 
 let image;
+let hasImage = false;
 
 inputFile.addEventListener("change", (event)=>{
      const image = event.target.files[0];
      const fileLoad = new FileReader();
+
      if(!image) return alert('URL is not found');
 
+      hasImage = true;
      fileLoad.onload = function(e){
         setImage(imgOne, e);
         setImage(imgTwo, e);
@@ -28,6 +30,11 @@ inputFile.addEventListener("change", (event)=>{
         setImage(imgThree, e);
      }
      fileLoad.readAsDataURL(image);
+
+     displayImage(imgOne, "hide");
+     displayImage(imgTwo, "hide");
+     displayImage(imgThree, "hide");
+     displayImage(imgFour, "hide");
 });
 /** Events images */
 imageOne.addEventListener("click", ()=>{
@@ -58,10 +65,12 @@ downArrow.addEventListener("click", ()=>{
 });
 
 display.addEventListener('click', ()=>{
-    imgOne.setAttribute('class', "");
-    imgTwo.setAttribute('class', "");
-    imgThree.setAttribute('class', "");
-    imgFour.setAttribute('class', "");
+    if(hasImage){
+        displayImage(imgOne, "");
+        displayImage(imgTwo, "");
+        displayImage(imgThree, "");
+        displayImage(imgFour, "");
+    }
 });
 
 function flipImage(arrow){
@@ -70,7 +79,6 @@ function flipImage(arrow){
 function setImage(node, event){
      node.src = event.target.result;
 }
-
-warning.addEventListener('load', ()=>{
-     warning.innerText = "Click into square to select and arrrow to flip image";
-});
+function displayImage(node, value) {
+     node.setAttribute('class', value);
+}
