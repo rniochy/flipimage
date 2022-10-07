@@ -10,16 +10,15 @@ const inputFile = document.getElementById("inputFile");
 const display = document.getElementById("display");
 
 let image;
-let i ;
 
 inputFile.addEventListener("change", (event)=>{
      console.log(event.target.files[0]);
      const im = event.target.files[0];
      const img = document.getElementById('one');
-     img.src = event.target.files[0];
+     img.setAttribute("src", im);
 });
 /** Events images */
-imageOne.addEventListener("click", (event)=>{
+imageOne.addEventListener("click", ()=>{
     const img = document.getElementById('one');
     image = img;
 });

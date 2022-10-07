@@ -39,14 +39,20 @@ h1 {
      grid-template-rows: repeat(2, 8rem);
      column-gap: .2rem;
      row-gap: .2rem;
-     margin-top: 1rem;
+     margin-top: 0.5rem;
 }
-.image, img {
+.image {
      background-color: red;
      height: 8rem;
      width: 8rem;
-     border: 1px solid rgb(0, 0, 0);
+     border: 3px solid rgb(0, 0, 0);
      border-radius: var(--border-radius);
+     position: relative;
+}
+img {
+     height: 7.9rem;
+     width: 7.9rem;
+     position: absolute;
 }
 
 #content-below {
