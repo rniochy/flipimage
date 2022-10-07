@@ -113,5 +113,5 @@ main {
      transform: rotate(180deg);
 }
 .flipLeft {
-     transform: rotate(360deg);
+     transform: rotate(270deg);
 }

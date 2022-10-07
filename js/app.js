@@ -12,16 +12,18 @@ let image;
 imageOne.addEventListener("click", (event)=>{
     const img = document.getElementById('one');
     image = img;
-    console.log(img);
 });
 imageTwo.addEventListener("click", ()=>{
-    alert();
+    const img = document.getElementById('two');
+    image = img;
 });
 imageThree.addEventListener("click", ()=>{
-    alert();
+    const img = document.getElementById('three');
+    image = img;
 });
 imageFour.addEventListener("click", ()=>{
-    alert();
+    const img = document.getElementById('four');
+    image = img;
 });
 
 /** Events Arrow */
@@ -29,9 +31,10 @@ upArrow.addEventListener("click", ()=>{
     image.className = "flipUp";
 });
 rightArrow.addEventListener("click", ()=>{
-      alert();
+    image.className = "flipRight";
 });
 leftArrow.addEventListener("click", ()=>{
+    image.className = "flipLeft";
 });
 downArrow.addEventListener("click", ()=>{
       image.className = "flipDown";
