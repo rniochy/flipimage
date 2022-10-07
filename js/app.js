@@ -12,12 +12,14 @@ const imgTwo = document.getElementById('two');
 const imgThree = document.getElementById('three');
 const imgFour = document.getElementById('four');
 const display = document.getElementById("display");
+const warning = document.getElementById("warning");
 
 let image;
 
 inputFile.addEventListener("change", (event)=>{
      const image = event.target.files[0];
      const fileLoad = new FileReader();
+     if(!image) return alert('URL is not found');
 
      fileLoad.onload = function(e){
         setImage(imgOne, e);
@@ -68,3 +70,7 @@ function flipImage(arrow){
 function setImage(node, event){
      node.src = event.target.result;
 }
+
+warning.addEventListener('load', ()=>{
+     warning.innerText = "Click into square to select and arrrow to flip image";
+});
