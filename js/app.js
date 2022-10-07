@@ -16,17 +16,16 @@ const display = document.getElementById("display");
 let image;
 
 inputFile.addEventListener("change", (event)=>{
-     console.log(event.target.files[0]);
-     const im = event.target.files[0];
+     const image = event.target.files[0];
      const fileLoad = new FileReader();
 
      fileLoad.onload = function(e){
-        imgOne.src = e.target.result;
-        imgTwo.src = e.target.result;
-        imgThree.src = e.target.result;
-        imgFour.src = e.target.result;
+        setImage(imgOne, e);
+        setImage(imgTwo, e);
+        setImage(imgFour, e);
+        setImage(imgThree, e);
      }
-     fileLoad.readAsDataURL(im)
+     fileLoad.readAsDataURL(image);
 });
 /** Events images */
 imageOne.addEventListener("click", ()=>{
@@ -61,8 +60,11 @@ display.addEventListener('click', ()=>{
     imgTwo.setAttribute('class', "");
     imgThree.setAttribute('class', "");
     imgFour.setAttribute('class', "");
-})
+});
 
 function flipImage(arrow){
      image.className = arrow;
+}
+function setImage(node, event){
+     node.src = event.target.result;
 }
