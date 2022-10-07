@@ -31,13 +31,14 @@ main {
      row-gap: .1rem;
      margin-top: 1rem;
 }
-.image {
+.image, img {
      background-color: red;
      height: 8rem;
      width: 8rem;
      border: 1px solid rgb(0, 0, 0);
      border-radius: var(--border-radius);
 }
+
 #content-below {
      margin-top: var(--margin-top);
      display: flex;
@@ -99,3 +100,5 @@ main {
 .arrow:hover {
     cursor: pointer;
 }
+
+/* Flip Image*/ 

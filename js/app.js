@@ -7,14 +7,26 @@ const imageTwo = document.getElementById("image-two");
 const imageThree = document.getElementById("image-three");
 const imageFour = document.getElementById("image-four");
 
-
+let image;
+/** Events images */
+imageOne.addEventListener("click", (event)=>{
+    const img = document.getElementById('one');
+    image = img;
+    console.log(img);
+});
+imageTwo.addEventListener("click", ()=>{
+    alert();
+});
+imageThree.addEventListener("click", ()=>{
+    alert();
+});
+imageFour.addEventListener("click", ()=>{
+    alert();
+});
 
 /** Events Arrow */
 upArrow.addEventListener("click", ()=>{
-      alert();
-});
-upArrow.addEventListener("click", ()=>{
-      alert();
+    
 });
 rightArrow.addEventListener("click", ()=>{
       alert();
@@ -23,18 +35,5 @@ leftArrow.addEventListener("click", ()=>{
       alert();
 });
 downArrow.addEventListener("click", ()=>{
-      alert();
-});
-/** Events Arrow */
-imageOne.addEventListener("click", ()=>{
-      alert();
-});
-imageTwo.addEventListener("click", ()=>{
-      alert();
-});
-imageThree.addEventListener("click", ()=>{
-      alert();
-});
-imageFour.addEventListener("click", ()=>{
-      alert();
+      image.src = ""
 });
