@@ -26,14 +26,13 @@ imageFour.addEventListener("click", ()=>{
 
 /** Events Arrow */
 upArrow.addEventListener("click", ()=>{
-    
+    image.className = "flipUp";
 });
 rightArrow.addEventListener("click", ()=>{
       alert();
 });
 leftArrow.addEventListener("click", ()=>{
-      alert();
 });
 downArrow.addEventListener("click", ()=>{
-      image.src = ""
+      image.className = "flipDown";
 });
