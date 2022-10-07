@@ -6,8 +6,18 @@ const imageOne = document.getElementById("image-one");
 const imageTwo = document.getElementById("image-two");
 const imageThree = document.getElementById("image-three");
 const imageFour = document.getElementById("image-four");
+const inputFile = document.getElementById("inputFile");
+const display = document.getElementById("display");
 
 let image;
+let i ;
+
+inputFile.addEventListener("change", (event)=>{
+     console.log(event.target.files[0]);
+     const im = event.target.files[0];
+     const img = document.getElementById('one');
+     img.src = event.target.files[0];
+});
 /** Events images */
 imageOne.addEventListener("click", (event)=>{
     const img = document.getElementById('one');
